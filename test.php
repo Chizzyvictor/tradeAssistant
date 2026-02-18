@@ -126,8 +126,9 @@
                     $tableCount = 0;
                     
                     foreach ($tables as $table) {
-                        $result = $conn->query("SHOW TABLES LIKE '$table'");
-                        if ($result->rowCount() > 0) {
+                        $stmt = $conn->prepare("SHOW TABLES LIKE ?");
+                        $stmt->execute([$table]);
+                        if ($stmt->rowCount() > 0) {
                             $tableCount++;
                         }
                     }

@@ -18,7 +18,8 @@ require_once BASE_PATH . '/config/database.php';
 // Timezone
 date_default_timezone_set('UTC');
 
-// Error reporting (set to 0 in production)
+// Error reporting - IMPORTANT: Disable in production for security
+// In production, set: error_reporting(0) and ini_set('display_errors', 0)
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 

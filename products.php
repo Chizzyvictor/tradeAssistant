@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     } else {
         // Add new product
-        $current_stock = intval($_POST['current_stock']) ?? 0;
+        $current_stock = intval($_POST['current_stock'] ?? 0);
         $stmt = $conn->prepare('INSERT INTO products (name, sku, description, category_id, unit_price, current_stock, min_stock_level) VALUES (?, ?, ?, ?, ?, ?, ?)');
         if ($stmt->execute([$name, $sku, $description, $category_id, $unit_price, $current_stock, $min_stock_level])) {
             $_SESSION['success'] = 'Product added successfully';

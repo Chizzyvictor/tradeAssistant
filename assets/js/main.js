@@ -53,6 +53,11 @@ $(document).ready(function() {
         var value = $(this).val();
         if (min !== undefined && parseFloat(value) < parseFloat(min)) {
             $(this).val(min);
+            // Visual feedback for auto-correction
+            $(this).addClass('border-warning');
+            setTimeout(() => {
+                $(this).removeClass('border-warning');
+            }, 1500);
         }
     });
 

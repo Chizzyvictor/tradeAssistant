@@ -37,7 +37,10 @@ class Database {
             );
         } catch(PDOException $e) {
             $this->error = $e->getMessage();
-            echo 'Connection Error: ' . $this->error;
+            // Log error for debugging (in production, use error_log instead of echo)
+            error_log('Database Connection Error: ' . $this->error);
+            // Display generic error to user
+            die('Database connection failed. Please check your configuration.');
         }
 
         return $this->conn;

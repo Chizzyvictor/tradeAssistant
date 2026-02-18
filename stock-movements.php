@@ -73,6 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 exit;
             }
         } elseif ($movement_type === 'adjustment') {
+            // Adjustment sets stock to absolute value (not additive)
             $new_stock = $quantity;
         }
 

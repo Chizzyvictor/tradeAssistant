@@ -1,0 +1,36 @@
+{
+  "name": "trade-assistant",
+  "version": "1.0.0",
+  "description": "Modern inventory management system for company managements with stock tracking features",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test test/**/*.test.js",
+    "lint": "eslint src/ test/",
+    "format": "prettier --write \"src/**/*.js\" \"test/**/*.js\""
+  },
+  "keywords": [
+    "inventory",
+    "stock",
+    "management",
+    "tracking",
+    "trade"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^9.2.12",
+    "chalk": "^5.3.0",
+    "cli-table3": "^0.6.3",
+    "express": "^4.18.2",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.54.0",
+    "prettier": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

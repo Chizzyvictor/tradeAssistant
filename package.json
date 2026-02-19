@@ -1,0 +1,22 @@
+{
+  "name": "trade-assistant",
+  "version": "1.0.0",
+  "description": "Modern inventory management system with PHP, jQuery and MySQL",
+  "scripts": {
+    "demo": "node demo.js",
+    "start": "php -S localhost:8000 -t .",
+    "test": "php test.php"
+  },
+  "keywords": [
+    "inventory",
+    "php",
+    "mysql",
+    "stock-management"
+  ],
+  "author": "Chizzyvictor",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Chizzyvictor/tradeAssistant.git"
+  }
+}

@@ -36,6 +36,18 @@ A modern, full-featured inventory management system built with PHP, jQuery, and 
 
 ### Setup Instructions
 
+**Quick Start (Recommended):**
+```bash
+git clone https://github.com/Chizzyvictor/tradeAssistant.git
+cd tradeAssistant
+npm install
+npm run demo
+```
+
+The demo server will guide you through the setup process and start a development server.
+
+**Manual Setup:**
+
 1. **Clone or Download the Repository**
    ```bash
    git clone https://github.com/Chizzyvictor/tradeAssistant.git
@@ -60,6 +72,14 @@ A modern, full-featured inventory management system built with PHP, jQuery, and 
    ```
 
 4. **Set Up Web Server**
+   
+   **Option A: PHP Built-in Server (Development)**
+   ```bash
+   php -S localhost:8000
+   ```
+   Then access: http://localhost:8000/login.php
+   
+   **Option B: Apache/Nginx (Production)**
    - Point your web server document root to the project directory
    - Ensure PHP has write permissions to the session directory
    
@@ -76,7 +96,7 @@ A modern, full-featured inventory management system built with PHP, jQuery, and 
    ```
 
 5. **Access the Application**
-   - Open your browser and navigate to `http://localhost/tradeAssistant` (or your configured URL)
+   - Open your browser and navigate to `http://localhost:8000/login.php` (or your configured URL)
    - Login with default credentials:
      - **Username**: admin
      - **Password**: admin123

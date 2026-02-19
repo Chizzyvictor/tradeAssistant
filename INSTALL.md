@@ -2,6 +2,56 @@
 
 ## Quick Start Guide
 
+### Option A: Using npm (Easiest)
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Chizzyvictor/tradeAssistant.git
+   cd tradeAssistant
+   ```
+
+2. **Install dependencies and run demo**
+   ```bash
+   npm install
+   npm run demo
+   ```
+   
+   This will:
+   - Check your PHP installation
+   - Display setup instructions
+   - Start a PHP development server at http://localhost:8000
+
+3. **Set up the database** (while server is running, open a new terminal)
+   ```bash
+   # Create database
+   mysql -u root -p -e "CREATE DATABASE inventory_system;"
+   
+   # Import schema
+   mysql -u root -p inventory_system < database.sql
+   ```
+
+4. **Configure database credentials**
+   - Edit `config/database.php` with your MySQL credentials
+
+5. **Access the application**
+   - Open: http://localhost:8000/login.php
+   - Login: `admin` / `admin123`
+
+### Option B: Using PHP Built-in Server
+
+1. **Set up database** (same as Option A, step 3)
+
+2. **Configure database connection** (same as Option A, step 4)
+
+3. **Start PHP server**
+   ```bash
+   php -S localhost:8000
+   ```
+
+4. **Access the application** (same as Option A, step 5)
+
+### Option C: Using Apache/Nginx (Traditional)
+
 ### Step 1: Database Setup
 
 1. Open phpMyAdmin or MySQL command line
@@ -35,6 +85,7 @@
    - WAMP: `C:\wamp\www\tradeAssistant`
    - MAMP: `/Applications/MAMP/htdocs/tradeAssistant`
    - Linux: `/var/www/html/tradeAssistant`
+   - Laragon: `C:\laragon\www\tradeAssistant`
 
 3. Open your web browser and navigate to:
    ```
